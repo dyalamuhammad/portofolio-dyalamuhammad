@@ -6,7 +6,7 @@ const experienceData = [
         role: "Human Capital Business Partner (Apprenticeship), PT Bank Syariah Indonesia (Persero) Tbk.",
         location: "Jakarta, Indonesia",
         startYear: "Mar, 2026",
-        endYear: "Present",
+        endYear: "Sep, 2026",
         bulletPoints: [
             "Coordinated workforce planning activities between Head Office and regional offices.",
             "Managed headcount requests, employee transfers, and workforce administration.",
