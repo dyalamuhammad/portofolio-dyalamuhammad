@@ -2,8 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const projects = [
     {
@@ -13,6 +11,17 @@ const projects = [
             "A location-based prayer time website that provides daily prayer schedules based on the user's current location. Integrated with geolocation and reverse geocoding using OpenStreetMap (Nominatim) to automatically detect and display the user's city. Built with a responsive interface and dynamic prayer time fetching, with Redis and QStash integration for scheduled background tasks and notification infrastructure.",
         image: "/images/projects/project-1.png",
         category: "Web Development",
+        liveUrl: "https://jadwal-shalat-app.vercel.app/",
+        githubUrl: "https://github.com/dyalamuhammad/jadwal-shalat-app.git",
+    },
+    { id: 2,
+        title: "Kirim Satset – Fast File Sharing Platform",
+        description:
+            "A fast and easy-to-use file sharing platform that allows users to upload files and instantly generate shareable links and QR codes. Recipients can access and download shared files through the generated link or by scanning the QR code. Supports password-protected file sharing to provide an additional layer of privacy and security. Built with Next.js, Supabase, and QR Code integration.",
+        image: "/images/projects/project-2.png",
+        category: "Web Development",
+        liveUrl: "https://kirim-satset-app.vercel.app/",
+        githubUrl: "https://github.com/dyalamuhammad/kirim-satset-app.git",
     },
 ];
 
@@ -66,6 +75,30 @@ const FeaturedProject = () => {
                                             {project.description}
                                         </p>
                                     </div>
+                                    {/* Project Links */}
+                                        <div className="flex items-center gap-4 pt-1">
+                                            {project.liveUrl && (
+                                                <a
+                                                    href={project.liveUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-sm font-medium text-primary hover:underline underline-offset-4"
+                                                >
+                                                    Live Preview ↗
+                                                </a>
+                                            )}
+
+                                            {project.githubUrl && (
+                                                <a
+                                                    href={project.githubUrl}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                                                >
+                                                    GitHub ↗
+                                                </a>
+                                            )}
+                                        </div>
                                 </div>
                             ))}
                         </div>
