@@ -23,6 +23,16 @@ const projects = [
         liveUrl: "https://kirim-satset-app.vercel.app/",
         githubUrl: "https://github.com/dyalamuhammad/kirim-satset-app.git",
     },
+     {
+        id: 3,
+        title: "Run Track – Running Activity Tracker",
+        description:
+            "A running activity tracker that helps users log and monitor their daily runs in one place. Users can record distance, duration, and pace for each session, then view their running history and progress over time through a clean and responsive dashboard. Built with Next.js, TypeScript, and Tailwind CSS, with a focus on smooth data entry, real-time stats calculation, and a mobile-friendly interface for tracking runs on the go.",
+        image: "/images/projects/project-3.png",
+        category: "Web Development",
+        liveUrl: "https://pelari-kalcer-app.vercel.app/", // ganti sesuai URL deploy kamu
+        githubUrl: "https://github.com/dyalamuhammad/pelari-kalcer-app.git", // ganti sesuai repo kamu
+    },
 ];
 
 const FeaturedProject = () => {
@@ -57,7 +67,7 @@ const FeaturedProject = () => {
                                             alt={project.title}
                                             fill
                                             sizes="(max-width: 640px) 100vw, 50vw"
-                                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                            className="object-contain transition-transform duration-500 group-hover:scale-105"
                                         />
                                     </div>
 
