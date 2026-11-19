@@ -11,15 +11,34 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Dyala Muhammad Panahpertama | Full Stack Web Developer",
-  description: "Full Stack Web Developer with experience in Laravel, Next.js, Express.js, and PostgreSQL. Building scalable, responsive, and user-focused web applications.",
+  description:
+    "Full Stack Web Developer with experience in Laravel, Next.js, Express.js, and PostgreSQL. Building scalable, responsive, and user-focused web applications.",
+
+  manifest: "/manifest.webmanifest",
+
+  icons: {
+    icon: [
+      { url: "/icons/icon-192.png", sizes: "192x192" },
+      { url: "/icons/icon-512.png", sizes: "512x512" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+  },
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Dyala Portfolio",
+  },
+
   openGraph: {
     title: "Dyala Muhammad Panahpertama | Full Stack Web Developer",
-    description: "Full Stack Web Developer building scalable and user-focused web applications.",
-    url: "https://portofolio-netxjs.vercel.app/", // Ganti dengan domain asli kamu
+    description:
+      "Full Stack Web Developer building scalable and user-focused web applications.",
+    url: "https://portofolio-netxjs.vercel.app/",
     siteName: "Dyala Portfolio",
     images: [
       {
-        url: "/images/og-image.jpg", // Letakkan file gambar di folder /public
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Dyala Muhammad Panahpertama Portfolio Preview",
@@ -38,9 +57,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Header/>
+        <Header />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
